@@ -135,14 +135,6 @@ Each model makes a different kind of mistake:
 ### Unavoidable errors
 Five gold words can't be matched by any model because their number of pieces differs from their number of gold tags: "lotta" (×3), "kinda" and "parent's". This caps the maximum accuracy at 99.91% for CB01 and 99.80% for HD20.
 
-## 6. Challenges and Next Steps
-1. **Overfitting:** the linear layer reached a training loss of 0.001 in every fold, so it memorized the training data. That explains its weakness on common tags.
-   - **Next step:** stronger weight decay (0.1–1) and input dropout, chosen by cross-validation.
-2. **Little gold data:** there are 4,569 training pieces in total, and transfer between interviews is weak. Training on HD20, the smaller interview (1,013 gold words), drops accuracy on CB01 to 84.8% (BERT) and 81.5% (RoBERTa).
-   - **Next step:** hand-label more turns, especially from HD20.
-3. **Gold-tag bias:** the gold tags were made by correcting machine output, so they may favour the original taggers.
-4. **Lowercase input:** this hurts the cased models (QCRI, bert-base-cased), especially on proper nouns.
-   - **Next step:** compare against an uncased BERT.
 
 ## Reproducing these results
 See `README.md`.
