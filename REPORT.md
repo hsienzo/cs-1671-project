@@ -140,3 +140,8 @@ Five gold words can't be matched by any model because their number of pieces dif
 See `README.md`.
 - **Main results and cross-interview table:** `POS-tagging/bert_roberta_pos_eval.ipynb`, run on Colab with an NVIDIA A100.
 - **Section 5 numbers:** `python POS-tagging/error_analysis.py`.
+
+## HuggingFace references
+- https://huggingface.co/QCRI/bert-base-multilingual-cased-pos-english
+- https://huggingface.co/google-bert/bert-base-cased
+- https://huggingface.co/FacebookAI/roberta-base
